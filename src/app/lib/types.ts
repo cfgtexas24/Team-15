@@ -1,5 +1,5 @@
 export interface Company {
-    id?: string; // Optional because Firestore generates it
+    id?: string;
     name: string;
 }
 
