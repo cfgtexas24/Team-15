@@ -56,14 +56,6 @@ export default function Applicable_Candidates() {
         <div className="app-container">
             <h1>Job Position: Software Engineer</h1>
             <h2> Search for Candidates</h2>
-            {/* <Image
-                src = "/logo.png"
-                alt = "Logo image"
-                width = {100}
-                height = {200}
-                align = middle left, middle right 
-        
-            /> */}
             <form onSubmit={handleSubmit}>
                 <div className='search-input'>
                     <input className='search-bar'
