@@ -1,4 +1,4 @@
-// app/api/recruiters/route.js
+// app/api/recruiters/route.ts
 import { db } from "../../lib/firebaseConfig"; // Import Firebase config
 import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "firebase/firestore";
 import { NextResponse } from "next/server";
@@ -10,7 +10,7 @@ const recruitersRef = collection(db, "recruiters");
 export async function POST(request) {
   try {
     const body = await request.json();
-    const docRef = await addDoc(recruitersRef, body);
+    const docRef = await addDoc(recruitersRef, body); // body contains name, company, and username
     return NextResponse.json({ message: "Recruiter created", id: docRef.id }, { status: 201 });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
@@ -21,7 +21,7 @@ export async function POST(request) {
 export async function GET() {
   try {
     const snapshot = await getDocs(recruitersRef);
-    const recruiters = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    const recruiters = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })); // includes name, company, and username
     return NextResponse.json(recruiters, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
@@ -32,7 +32,7 @@ export async function GET() {
 export async function PUT(request) {
   try {
     const body = await request.json();
-    const { id, ...updatedData } = body;
+    const { id, ...updatedData } = body; // updatedData contains name, company, and/or username
     const docRef = doc(db, "recruiters", id);
     await updateDoc(docRef, updatedData);
     return NextResponse.json({ message: "Recruiter updated" }, { status: 200 });
