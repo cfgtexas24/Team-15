@@ -1,22 +1,39 @@
-'use client'
+'use client';
 import { useState } from "react";
-import { auth } from "../../app/lib/firebaseConfig"
+import { auth } from "../../app/lib/firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/navigation";
+
 
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user"); // Default role
   const [error, setError] = useState("");
+
+  const router = useRouter();
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      // User signed up successfully
-      console.log("User registered:", email);
-      // You can redirect or show a success message here
+      // Create user with email and password
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Call API to set the role
+      const response = await fetch("/api/setRole", {
+        method: "POST",
+        body: JSON.stringify({ uid: user.uid, role }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to set user role.");
+      }
+      router.push("/dashboard")
+
     } catch (error) {
       setError(error.message); // Set error message
       console.error("Error signing up:", error);
@@ -68,6 +85,32 @@ export default function Signup() {
               required
             />
           </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">Role</label>
+            <div className="flex items-center">
+              <input
+                type="radio"
+                id="user"
+                name="role"
+                value="user"
+                checked={role === "user"}
+                onChange={() => setRole("user")}
+                className="mr-2"
+              />
+              <label htmlFor="user" className="mr-4">User</label>
+
+              <input
+                type="radio"
+                id="employer"
+                name="role"
+                value="employer"
+                checked={role === "employer"}
+                onChange={() => setRole("employer")}
+                className="mr-2"
+              />
+              <label htmlFor="employer">Employer</label>
+            </div>
+          </div>
           <button
             type="submit"
             className="w-full bg-[#FFC00D] text-white py-2 rounded hover:bg-[#a48736] transition"
@@ -76,7 +119,7 @@ export default function Signup() {
           </button>
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
-          Already have an account? <a href="/login" className="text-blue-600 hover:underline">Login</a>
+          Already have an account? <a href="/" className="text-blue-600 hover:underline">Login</a>
         </p>
       </div>
     </div>

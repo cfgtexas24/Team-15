@@ -4,8 +4,12 @@ import { useEffect } from "react";
 import { useAuth } from "../auth/AuthProvider"; // Adjust path if needed
 import { useRouter } from "next/navigation";
 
+import UserDashboard from "./UserDashboard";
+import EmployerDashboard from "./EmployerDashboard";
+
+
 export default function DashboardPage() {
-  const { user, loading, handleSignOut } = useAuth();
+  const { user, userRole, loading, handleSignOut } = useAuth();
   const router = useRouter();
 
   // Redirect to home if user is not authenticated
@@ -23,15 +27,9 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">This is a protected page!</h1>
-      <p className="text-lg mb-6">Welcome, {user.email}</p>
-      <button
-        onClick={handleSignOut}
-        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-      >
-        Sign Out
-      </button>
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      {userRole === "user" && <UserDashboard />}
+      {userRole === "employer" && <EmployerDashboard />}
     </div>
   );
 }
