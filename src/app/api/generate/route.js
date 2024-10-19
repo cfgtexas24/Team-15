@@ -3,13 +3,12 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
 // Create an asynchronous function POST to handle POST 
-// request with parameters request and response.
 
 export async function POST(req, res) {
 
     try {
         // Access your API key by creating an instance of GoogleGenerativeAI 
-        const genAI = new GoogleGenerativeAI('') // INSERT API KEY HERE
+        const genAI = new GoogleGenerativeAI(process.env.NEXT_GOOGLE_GEMINI_KEY)
 
         // Ininitalize the model
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
