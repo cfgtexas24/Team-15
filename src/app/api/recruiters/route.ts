@@ -16,3 +16,15 @@ export async function POST(request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+
+// Get All Companies (GET)
+export async function GET() {
+    try {
+      const snapshot = await getDocs(companiesRef);
+      const companies = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      return NextResponse.json(companies, { status: 200 });
+    } catch (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+  }
+  
