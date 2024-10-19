@@ -1,7 +1,7 @@
-import { useState } from "react"
-import './UserProfile'
-const [email, setEmail] = useState('')
-const [password, setPassword] = useState('')
+// import { useState } from "react"
+// // import './UserProfile'
+// const [email, setEmail] = useState('')
+// const [password, setPassword] = useState('')
 
 export default function Login() {
 

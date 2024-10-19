@@ -1,9 +1,9 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-const [email, setEmail] = useState('')
-const [password, setPassword] = useState('')
-const [profilePicture, setprofilePicture] = useState('')
-const [userName, setUsername] = useState('')
+// const [email, setEmail] = useState('')
+// const [password, setPassword] = useState('')
+// const [profilePicture, setprofilePicture] = useState('')
+// const [userName, setUsername] = useState('')
 
 
 
