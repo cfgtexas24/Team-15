@@ -1,4 +1,4 @@
-// Import `GoogleGenerative` from the package we installed earlier.
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
