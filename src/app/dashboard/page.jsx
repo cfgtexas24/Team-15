@@ -38,7 +38,7 @@ export default function DashboardPage() {
     },
     {
       id: 2,
-      name: "Software Engineer",
+      name: "Retail Manager",
       location: "1234 Windonway Lane"
     },
     {
@@ -65,7 +65,7 @@ export default function DashboardPage() {
 
   return (
     <section className='flex flex-col h-screen w-full bg-gray-200 px-16 pt-16 gap-8 overflow-hidden'>
-<div className="flex justify-between">
+      <div className="flex justify-between">
         <div className="flex flex-row gap-8 items-center">
           <h3 className="text-3xl ">Welcome, {user.email}!</h3>
           <button
@@ -90,10 +90,10 @@ export default function DashboardPage() {
               <Badge className='bg-[#FFC10C] text-xl'>17</Badge>
               <p>Accepted Applications</p>
             </div>
-  
+
           </div>
         </div>
-</div>
+      </div>
       {/* <hr className="w-full divide-gray-400 h-[2px]"></hr> */}
       <div className='flex flex-col h-full gap-2'>
         <h3 className='text-gray-900 text-2xl font-bold'>Listings</h3>

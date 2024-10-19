@@ -99,15 +99,24 @@ body {
 }
 
 .red-bar {
-    background-color: red;
+    background-color: orange;
+    height: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
 }
 
 .yellow-bar {
     background-color: yellow;
+    height: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
 }
 
 .green-bar {
     background-color: green;
+    height: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
 }
 
 .key-container {
