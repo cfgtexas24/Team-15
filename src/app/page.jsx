@@ -45,7 +45,7 @@ export default function Home() {
             </label>
             <input
               type="password"
-              id="password" value={password}
+              id="password" value={password} onChange={(e) => setPassword(e.target.value)}
               className="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
               required
             />
