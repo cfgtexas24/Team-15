@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../auth/AuthProvider"; // Adjust path if needed
 import { useRouter } from "next/navigation";
 import React from 'react'
-import JobListing from './jobListing'
+import JobListing from './JobListing'
 import { Button } from '../dashboard/components/ui/button'
 import { Sparkles } from 'lucide-react'
 import Link from 'next/link'
