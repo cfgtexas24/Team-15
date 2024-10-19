@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }) {
 
     const userNavItems = [
         { href: '/dashboard', label: 'Job Postings' },
-        { href: '/dashboard/u/calendar', label: 'Calendar' },
+        { href: '/dashboard/e/calendar', label: 'Calendar' },
         { href: '/dashboard/u/inbox', label: 'Inbox' },
         { href: '/dashboard/u/profile', label: 'Profile' },
     ]
