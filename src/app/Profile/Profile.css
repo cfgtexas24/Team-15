@@ -1,0 +1,67 @@
+html {
+background-color: #475299;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-left: 10em;
+}
+
+.header {
+    font-family: var(--font-montserrat), var(--font-montserrat);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.pageMessage {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profileInfo {
+    font-family: var(--font-europa), var(--font-europa); 
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.profileImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.editAccount {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.editAccount:hover {
+    background-color: #e0a800;
+}
