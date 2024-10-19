@@ -65,36 +65,38 @@ export default function DashboardPage() {
 
   return (
     <section className='flex flex-col h-screen w-full bg-gray-200 px-16 pt-16 gap-8 overflow-hidden'>
-      <div className="flex flex-row justify-between items-center">
-        <h3 className="text-3xl ">Welcome, {user.email}!</h3>
-        <button
-          onClick={handleSignOut}
-          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-        >
-          Sign Out
-        </button>
-      </div>
-      <hr className="w-full divide-gray-400 h-[2px]"></hr>
-      <div className='flex flex-col h-1/4 gap-1'>
-        <h3 className='text-gray-900 text-2xl'>Insights</h3>
-        <div className='flex h-full w-full bg-white p-8 rounded-xl gap-6'>
-          <div className='flex gap-2 items-center'>
-            <Badge variant="outline" className='text-xl'>187</Badge>
-            <p>Applicable Candidates</p>
-          </div>
-          <div className='flex gap-2 items-center'>
-            <Badge variant="outline" className='border-[#FFC10C] text-[#FFC10C] text-xl'>34</Badge>
-            <p>In Interview Progress</p>
-          </div>
-          <div className='flex gap-2 items-center'>
-            <Badge className='bg-[#FFC10C] text-xl'>17</Badge>
-            <p>Accepted Applications</p>
-          </div>
-
+<div className="flex justify-between">
+        <div className="flex flex-row gap-8 items-center">
+          <h3 className="text-3xl ">Welcome, {user.email}!</h3>
+          <button
+            onClick={handleSignOut}
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+          >
+            Sign Out
+          </button>
         </div>
-      </div>
+        <div className='flex flex-col h-1/4 gap-1'>
+          <h3 className='text-gray-900 text-2xl font-bold'>Insights</h3>
+          <div className='flex h-full w-full bg-white p-8 rounded-xl gap-6'>
+            <div className='flex gap-2 items-center'>
+              <Badge variant="outline" className='text-xl'>187</Badge>
+              <p>Applicable Candidates</p>
+            </div>
+            <div className='flex gap-2 items-center'>
+              <Badge variant="outline" className='border-[#FFC10C] text-[#FFC10C] text-xl'>34</Badge>
+              <p>In Interview Progress</p>
+            </div>
+            <div className='flex gap-2 items-center'>
+              <Badge className='bg-[#FFC10C] text-xl'>17</Badge>
+              <p>Accepted Applications</p>
+            </div>
+  
+          </div>
+        </div>
+</div>
+      {/* <hr className="w-full divide-gray-400 h-[2px]"></hr> */}
       <div className='flex flex-col h-full gap-2'>
-        <h3 className='text-gray-900 text-2xl'>Listings</h3>
+        <h3 className='text-gray-900 text-2xl font-bold'>Listings</h3>
         <div className='flex flex-col h-full w-full bg-white p-8 rounded-t-xl gap-8 overflow-y-scroll no-scrollbar'>
 
           <Button asChild className='bg-[#FFC10C]'>
