@@ -4,7 +4,7 @@ import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "firebase
 import { NextResponse } from "next/server";
 
 // Firestore collection reference
-const companiesRef = collection(db, "jobs_applied");
+const jobs_appliedRef = collection(db, "jobs_applied");
 
 // Create Jobs Applied (POST)
 export async function POST(request) {
@@ -21,7 +21,7 @@ export async function POST(request) {
 export async function GET() {
   try {
     const snapshot = await getDocs(jobs_appliedRef);
-    const companies = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    const jobs_applied = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     return NextResponse.json(jobs_applied, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
