@@ -2,6 +2,9 @@
 
 import './Applicable_Candidates.css';
 import { useState, useEffect} from 'react';
+import Image from 'next/image';
+
+
 
 export default function Applicable_Candidates() {
     const [input, setInput] = useState('');
@@ -53,14 +56,21 @@ export default function Applicable_Candidates() {
         <div className="app-container">
             <h1>Job Position: Software Engineer</h1>
             <h2> Search for Candidates</h2>
-
+            {/* <Image
+                src = "/logo.png"
+                alt = "Logo image"
+                width = {100}
+                height = {200}
+                align = middle left, middle right 
+        
+            /> */}
             <form onSubmit={handleSubmit}>
                 <div className='search-input'>
                     <input className='search-bar'
                         type='text'
                         value={input}
                         onChange={e => setInput(e.target.value)}
-                        placeholder='Enter Listing Search...'
+                        placeholder='Enter Candidate Search...'
                     />
                     <button className='search-button' type='submit'>Search</button>
                 </div>
@@ -71,14 +81,24 @@ export default function Applicable_Candidates() {
             <div className="results-container">
                 {results.map((item, index) => (
                     <div className='container' key={index}>
+                        <div className = 'logo' >
+                            <Image 
+                            src = "/logo.png"
+                            alt = "Logo image"
+                            width = {100}
+                            height = {100}
+                        />
+                        <div className= "candidate info">
                         <p className='result-name'>Name: {item["Full Name"] || "N/A"}</p>
                         <p className="result-info">Email: {item.Email || "N/A"}</p>
                         <p className="result-info">Phone: {item.Phone || "N/A"}</p>
                         <p className="result-info">Profile: <a href={item.Profile || "#"} target="_blank" rel="noopener noreferrer">{item.Profile || "N/A"}</a></p>
                         <p className="result-info">Keywords: {item.Keywords || "N/A"}</p>
                     </div>
-                ))}
+                </div>
             </div>
-        </div>
-    );
+        ))}
+    </div>
+</div>
+);
 }
