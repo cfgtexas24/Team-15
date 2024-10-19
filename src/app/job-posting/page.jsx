@@ -42,8 +42,7 @@ const JobPostingPage = () => {
       const result = await response.json();
       const formattedDescription = result.output.replace(/(\r\n|\n|\r)/gm, ' '); // Remove JSON-like formatting
       setJobData((prevData) => ({ ...prevData, description: formattedDescription }));
-
-      print(jobData)
+      
     } catch (error) {
       console.error('Error generating job description:', error);
     } finally {
@@ -115,7 +114,7 @@ const JobPostingPage = () => {
           <p><strong>Role:</strong> {jobData.role}</p>
           <p><strong>Skills Required:</strong> {skillVariations(jobData.skills)}</p>
           <p><strong>Salary:</strong> {jobData.salary}</p>
-          <p><strong>Description:</strong> {JSON.parse.jobData[""]}</p>
+          <p><strong>Description:</strong> {jobData.description}</p>
         </div>
       )}
     </div>
