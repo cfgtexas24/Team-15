@@ -1,4 +1,4 @@
-import './UserProfile'
+// import './UserProfile'
 export default function Profile() {
 
     return (
