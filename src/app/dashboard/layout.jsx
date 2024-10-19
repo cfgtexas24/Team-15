@@ -9,8 +9,8 @@ export default function DashboardLayout({ children }) {
 
   const navItems=[
     {href: '/dashboard', label:'Job Postings'},
-    {href: '/dashboard/test', label:'Messages'},
-    {href: '/', label:'Calendar'},
+    {href: '/', label:'Messages'},
+    {href: '/calendar', label:'Calendar'},
     {href: '/', label:'Inbox'},
     {href: '/', label:'Profile'},
   ]
