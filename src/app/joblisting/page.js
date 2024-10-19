@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 function JobListingList() {
 
+  const desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   const dummy = [
     {
       id: 1,
@@ -53,7 +54,7 @@ function JobListingList() {
           </Button>
         </div>
         {dummy.map((dumdum) =>
-          <JobListing key={dumdum.id} name={dumdum.name} location={dumdum.location} />
+          <JobListing key={dumdum.id} name={dumdum.name} location={dumdum.location} desc={desc}/>
         )}
       </div>
     </section>
