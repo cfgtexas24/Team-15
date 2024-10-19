@@ -17,16 +17,6 @@ export function AuthProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user); // Set the user in state if they are signed in.
       setLoading(false); // Stop loading once authentication state is known.
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        const idTokenResult = await getIdTokenResult(user);
-        setUser(user);
-        setUserRole(idTokenResult.claims.role || "user"); // Fetch role from custom claims
-      } else {
-        setUser(null);
-        setUserRole(null);
-      }
-      setLoading(false);
     });
 
     return () => unsubscribe(); // Cleanup the subscription when the component unmounts.
@@ -41,16 +31,12 @@ export function AuthProvider({ children }) {
     } catch (error) {
       console.error("Error signing out:", error); // Log any errors that occur during sign-out.
     }
-    await signOut(auth);
-    router.push("/");
   };
 
   return (
     // Providing the user, loading state, and sign-out function to the context.
     <AuthContext.Provider value={{ user, loading, handleSignOut }}>
       {children} {/* Render all children components that are wrapped in this provider */}
-    <AuthContext.Provider value={{ user, userRole, loading, handleSignOut }}>
-      {children}
     </AuthContext.Provider>
   );
 }
@@ -59,4 +45,3 @@ export function AuthProvider({ children }) {
 export const useAuth = () => {
   return useContext(AuthContext); // Returns the authentication context (user, loading, handleSignOut).
 };
-export const useAuth = () => useContext(AuthContext);
