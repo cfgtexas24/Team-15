@@ -15,7 +15,10 @@ export interface JobPosting {
 }
 
 export interface Recruiter{
-
+    name: string;
+    recID: string;
+    company: string;
+    username: string;
 }
 
 export interface JobsApplied{
