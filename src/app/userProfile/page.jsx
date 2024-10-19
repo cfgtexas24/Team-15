@@ -1,6 +1,5 @@
-
 "use client"; 
-import './Profile.css';
+import './userProfile.css';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
