@@ -1,19 +1,18 @@
-
 html {
     background-color: #475299;
-    height: 100%;
-    margin: 0; 
+    height: 100%; 
+    margin: 0;
 }
 
 body {
-    margin: 0;
+    margin: 0; 
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center;
+    justify-content: center; 
     min-height: 100vh; 
     padding: 20px;
 }
