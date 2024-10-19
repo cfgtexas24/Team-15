@@ -11,6 +11,7 @@ background-color: #475299;
 }
 
 .header {
+    font-family: var(--font-montserrat), var(--font-montserrat);
     text-align: center;
     margin-bottom: 40px;
 }
@@ -28,6 +29,7 @@ background-color: #475299;
 }
 
 .profileInfo {
+    font-family: var(--font-europa), var(--font-europa); 
     background-color: white;
     padding: 20px;
     border-radius: 10px;

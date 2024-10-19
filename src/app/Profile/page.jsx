@@ -1,10 +1,12 @@
  import './profile.css'
+ import Image from 'next/image'
+
 export default function Profile() {
 
     return (
         <div className='container'> 
                 <div className="header">
-                    <img src="logo" alt="Rebirth Logo" />
+                    <img src="/logo.png" alt="Rebirth Logo" />
                     <h2 className="pageMessage">Rebirth Job Portal</h2>
                 </div>
 
