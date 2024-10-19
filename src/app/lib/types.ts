@@ -9,3 +9,19 @@ export interface JobPosting {
     location: string;
     industry: string;
 }
+
+export interface Recruiter{
+
+}
+
+export interface JobsApplied{
+
+}
+
+export interface ContactInfo{
+
+}
+
+export interface Employees{
+
+}
