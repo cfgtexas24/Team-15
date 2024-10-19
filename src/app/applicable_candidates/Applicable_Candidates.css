@@ -90,4 +90,47 @@ body {
 .image-container {
     margin: 10px;
 }
+.status-bar {
+    height: 20px;
+    width: 100%;
+    margin-top: 5px; 
+    border: 2px black;
+    border-radius: 5px;
+}
+
+.red-bar {
+    background-color: red;
+}
+
+.yellow-bar {
+    background-color: yellow;
+}
+
+.green-bar {
+    background-color: green;
+}
+
+.key-container {
+    margin-top: 20px;               
+    padding: 15px;                   
+    border: 2px solid #ccc;         
+    border-radius: 10px;  
+        
+    background-color: #f9f9f9;       
+}
+
+.key-item {
+    display: flex;                   
+    align-items: center;             
+    margin: 5px 0;                   
+}
+
+.key-item .status-bar {
+    width: 20px;   
+    border: 2px solid black;                  
+    height: 10px;                    
+    margin-right: 10px;             
+}
+
+
 

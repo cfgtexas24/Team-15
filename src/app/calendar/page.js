@@ -1,6 +1,6 @@
 "use client"; 
 
-import Calendar from '../dashboard/Calendar';
+import Calendar from '../dashboard/calendar';
 
 export default function CalendarPage() {
   return <Calendar />;
