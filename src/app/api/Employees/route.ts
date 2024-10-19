@@ -4,7 +4,7 @@ import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "firebase
 import { NextResponse } from "next/server";
 
 // Firestore collection reference
-const companiesRef = collection(db, "employees");
+const employeesRef = collection(db, "employees");
 
 // Create Employee (POST)
 export async function POST(request) {
