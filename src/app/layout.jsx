@@ -1,17 +1,26 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { AuthProvider } from "./auth/AuthProvider";
+import { Montserrat } from "next/font/google"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const europa = localFont({
+  src: [
+    {
+      path: "./fonts/EuropaNuovaBold.ttf",
+      weight: "700"
+    },
+    {
+      path: "./fonts/EuropaNuovaExtraBold.ttf",
+      weight: "800"
+    },
+    {
+      path: "./fonts/EuropaNuovaRegular.ttf",
+      weight: "400"
+    }
+  ],
+  variable: "--font-europa"
+})
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${europa.variable} ${montserrat.className} antialiased`}
       >
         <AuthProvider>
           {children}
