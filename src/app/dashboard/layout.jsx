@@ -1,4 +1,5 @@
 "use client";
+
 import Image from 'next/image';
 import './style.css'
 import { usePathname } from 'next/navigation';
