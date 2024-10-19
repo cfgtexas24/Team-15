@@ -1,12 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-europa), Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-europa);
   font-weight: bold;
 }
@@ -51,6 +56,7 @@ p {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -83,18 +89,24 @@ p {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-} 
+}
 
 @layer utilities {
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
- /* Hide scrollbar for IE, Edge and Firefox */
+
+  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 }

@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { BookOpen, Edit } from 'lucide-react'
 
+
 function JobListing(props) {
   return (
-    <Link href="/">
+    <Link href="/listing">
       <section className="flex flex-row w-full h-auto bg-white border border-gray-300 shadow-[0px_0px_1rem_rgba(0,0,0,0.1)] hover:shadow-[0px_0px_1rem_rgba(0,0,0,0.2)] transition rounded-2xl p-4 gap-4">
         <div className='w-auto flex flex-col justify-evenly h-auto p-4 gap-4'>
           <div className='flex items-center'>
