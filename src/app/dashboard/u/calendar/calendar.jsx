@@ -7,7 +7,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 
 export default function Calendar() {
   const events = [
-    {title: 'Slot 1' , start: '2024-10-19T11:30:00', end: '2024-10-19T12:00:00'},
+    { title: 'Slot 1' , start: '2024-10-19T11:30:00', end: '2024-10-19T12:00:00'},
     { title: 'Slot 2', start: '2024-10-22T10:00:00', end: '2024-10-22T10:30:00' },
     { title: 'Slot 3', start: '2024-10-22T11:00:00', end: '2024-10-22T11:30:00' },
     { title: 'Slot 4', start: '2024-10-23T12:00:00', end: '2024-10-23T12:30:00' }

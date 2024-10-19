@@ -19,12 +19,6 @@ export default function EmployerDashboard() {
   return (
     <div className="flex flex-col items-center">
       <h2>Welcome, Employer {user?.email}!</h2>
-      <button
-        onClick={handleSignOut}
-        className="bg-red-500 text-white px-4 py-2 rounded mt-4 hover:bg-red-600 transition"
-      >
-        Sign Out
-      </button>
     </div>
   );
 }
