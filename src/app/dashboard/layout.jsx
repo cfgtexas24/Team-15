@@ -50,12 +50,12 @@ export default function DashboardLayout({ children }) {
                 </div>
 
                 <div className='flex gap-3'>
-                    <ul className="navOptions">
+                    <ul className="navOptions ">
                         {userRole == "user" && userNavItems.map((item) => (
-                            <Link key={item.href} href={item.href} className={pathname === item.href ? 'text-white p-2 border border-black bg-[#475299]' : 'text-black p-2'}>{item.label}</Link>
+                            <Link key={item.href} href={item.href} className={pathname === item.href ? 'text-white p-2 border border-black bg-[#475299] rounded' :  'bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500 transition'}>{item.label}</Link>
                         ))}
                         {userRole == "employer" && empNavItems.map((item) => (
-                            <Link key={item.href} href={item.href} className={pathname === item.href ? 'text-white p-2 border border-black bg-[#475299]' : 'text-black p-2'}>{item.label}</Link>
+                            <Link key={item.href} href={item.href} className={pathname === item.href ? 'text-white p-2 border border-black bg-[#475299] rounded' :  'bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500 transition'}>{item.label}</Link>
                         ))}
                     </ul>
                     <button

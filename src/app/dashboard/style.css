@@ -19,6 +19,9 @@
     font-size: 17px;
     margin-left: 10px;
     margin-right: 5px;
+    padding: 2px;
+    background-color: black;
+    
 }
 
 .navOptions li:hover {
