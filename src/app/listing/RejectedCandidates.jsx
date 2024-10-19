@@ -24,22 +24,20 @@ export default function RejectedCandidates() {
 
   const sampleData = [
     {
-      "Full Name": "Toby Grant",
-      "Email": "tobygrant@example.com",
-      "Phone": "123-456-7890",
-      "Profile": "https://example.com/profile/tobygrant",
-      "Keywords": "JavaScript, React",
-      "Application Status": "Stage 1: Resume Reviewed, Phone Call Completed"
+        "Full Name": "Toby Grant",
+        "Email": "tobygrant@example.com",
+        "Phone": "123-456-7890",
+        "Profile": "https://example.com/profile/tobygrant",
+        "Reason for Rejection": "No experience in HTML"
     },
     {
-      "Full Name": "Catherine Smith",
-      "Email": "catherinesmith@example.com",
-      "Phone": "098-765-4321",
-      "Profile": "https://example.com/profile/catherinesmith",
-      "Keywords": "Python, Django",
-      "Application Status": "Stage 2: Interview with Team Leader Complete"
+        "Full Name": "Catherine Smith",
+        "Email": "catherinesmith@example.com",
+        "Phone": "098-765-4321",
+        "Profile": "https://example.com/profile/tobygrant",
+        "Reason for Rejection": "No Java experience"
     },
-  ];
+];
 
   useEffect(() => {
     setData(sampleData);

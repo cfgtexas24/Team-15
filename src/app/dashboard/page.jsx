@@ -38,7 +38,7 @@ export default function DashboardPage() {
     },
     {
       id: 2,
-      name: "Software Engineer",
+      name: "Retail Manager",
       location: "1234 Windonway Lane"
     },
     {
