@@ -43,7 +43,12 @@ export default function DashboardLayout({ children }) {
     return (
         <div className="min-h-screen bg-gray-50">
             <nav className="navbar">
-                <Image src="/assets/images/mainLogo.png" className="logo" width={175} height={125} />
+
+                <div className='flex items-center gap-3'>
+                    <div><Image src="/assets/images/logo.png" className="logo" width={65} height={50} /></div>
+                    <h1 className='ml-0 font-bold text-lg'>Rebirth Empowerment Education</h1>
+                </div>
+
                 <div className='flex gap-3'>
                     <ul className="navOptions">
                         {userRole == "user" && userNavItems.map((item) => (
