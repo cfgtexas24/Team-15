@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }) {
     {href: '/', label:'Messages'},
     {href: '/calendar', label:'Calendar'},
     {href: '/', label:'Inbox'},
-    {href: '/', label:'Profile'},
+    {href: '/../Profile', label:'Profile'},
   ]
 
   return (
