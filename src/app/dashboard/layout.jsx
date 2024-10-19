@@ -29,7 +29,7 @@ export default function DashboardLayout({ children }) {
     const pathname = usePathname();
 
     const userNavItems = [
-        { href: '/dashboard/e/job-posting', label: 'Job Postings' },
+        { href: '/dashboard', label: 'Job Postings' },
         { href: '/dashboard/e/calendar', label: 'Calendar' },
         { href: '/dashboard/u/inbox', label: 'Inbox' },
         { href: '/dashboard/u/profile', label: 'Profile' },
@@ -37,7 +37,7 @@ export default function DashboardLayout({ children }) {
 
     const empNavItems = [
         { href: '/dashboard', label: 'Job Postings' },
-        { href: '/dashboard/e/inbox', label: 'Inbox' },
+        // { href: '/dashboard/e/inbox', label: 'Inbox' },
     ]
 
     return (
@@ -45,7 +45,7 @@ export default function DashboardLayout({ children }) {
             <nav className="navbar">
 
                 <div className='flex items-center gap-3'>
-                    <div><Image src="/assets/images/logo.png" className="logo" width={65} height={50} /></div>
+                    <div><Image src="/assets/images/logo.png" className="logo" width={70} height={70} /></div>
                     <h1 className='ml-0 font-bold text-lg'>Rebirth Empowerment Education</h1>
                 </div>
 

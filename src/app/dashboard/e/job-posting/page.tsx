@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useAuth } from "../../../auth/AuthProvider"; // Adjust path if needed
 import { useRouter } from "next/navigation";
 import React from 'react'
-import JobListing from './JobListing'
+import JobListing from '../../jobListing'
 import { Button } from '../../../dashboard/components/ui/button'
 import { Sparkles } from 'lucide-react'
 import Link from 'next/link'
@@ -64,18 +64,19 @@ export default function DashboardPage() {
   ]
 
   return (
-    <section className='flex flex-col h-screen w-full bg-gray-200 px-16 pt-16 gap-8 overflow-hidden'>
-<div className="flex justify-between">
-        <div className="flex flex-row gap-8 items-center">
-          <h3 className="text-3xl ">Welcome, {user.email}!</h3>
-          {/* <button
+    <section className='flex flex-col h-screen w-full px-16 pt-16 gap-8'>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-row gap-8 items-center justify-between">
+          <h3 className="text-3xl font-bold">Welcome, {user.email}!</h3>
+          <button
             onClick={handleSignOut}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
           >
             Sign Out
-          </button> */}
+          </button>
         </div>
-        <div className='flex flex-col h-1/4 gap-1'>
+
+        <div className='flex flex-col gap-1'>
           <h3 className='text-gray-900 text-2xl font-bold'>Insights</h3>
           <div className='flex h-full w-full bg-white p-8 rounded-xl gap-6'>
             <div className='flex gap-2 items-center'>
@@ -90,14 +91,14 @@ export default function DashboardPage() {
               <Badge className='bg-[#FFC10C] text-xl'>17</Badge>
               <p>Accepted Applications</p>
             </div>
-  
+
           </div>
         </div>
-</div>
+      </div>
       {/* <hr className="w-full divide-gray-400 h-[2px]"></hr> */}
       <div className='flex flex-col h-full gap-2'>
         <h3 className='text-gray-900 text-2xl font-bold'>Listings</h3>
-        <div className='flex flex-col h-full w-full bg-white p-8 rounded-t-xl gap-8 overflow-y-scroll no-scrollbar'>
+        <div className='flex flex-col w-full bg-white p-8 rounded-t-xl gap-8'>
 
           <Button asChild className='bg-[#FFC10C]'>
             <Link href='/jobposting'><Sparkles />Create New Job Posting</Link>

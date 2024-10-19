@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }) {
 
     // Redirect to home if user is not authenticated
     useEffect(() => {
-        if (!userRole == "employer") {
+        if (!userRole === "employer") {
             router.back();
         }
     }, [userRole, router]);
