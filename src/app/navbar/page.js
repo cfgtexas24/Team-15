@@ -5,7 +5,7 @@ import React from 'react'
 export default function Navbar(){
     return(
         <nav className="navbar">
-            <Image src="/assets/images/mainLogo.png" className="logo" width={50} height={50}/>
+            <Image src="/assets/images/mainLogo.png" className="logo" width={175} height={125}/>
             <ul className="navOptions">
                 <li>Job Postings</li>
                 <li>Messages</li>
