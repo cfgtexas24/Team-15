@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+  },
     "lib": [
       "dom",
       "dom.iterable",
@@ -27,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/dashboard/layout.js"  ],
   "exclude": [
     "node_modules"
   ]

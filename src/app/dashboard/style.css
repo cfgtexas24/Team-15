@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:   white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.navOptions {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navOptions li {
+    color: black;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 2px;
+    background-color: black;
+    
+}
+
+.navOptions li:hover {
+    color: navy;
+}
